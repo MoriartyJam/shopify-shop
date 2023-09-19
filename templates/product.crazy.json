@@ -20,6 +20,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "variant_picker": {
@@ -92,11 +93,18 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "e410afd4-8fbf-4faf-8131-a200e070800e": {
+      "type": "product-benefits-metafild",
+      "settings": {
+        "paragraph": ""
+      }
     }
   },
   "order": [
     "ce28435c-afff-4dd5-bb87-dcfd43c2811b",
     "main",
-    "related-products"
+    "related-products",
+    "e410afd4-8fbf-4faf-8131-a200e070800e"
   ]
 }

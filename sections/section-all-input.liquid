@@ -1,0 +1,145 @@
+<div class="page-width section-all-input__block">
+  <h2>Text Fields</h2>
+  <div>{{ section.settings.input_text }}</div>
+  <div>{{ section.settings.input_textarea }}</div>
+  <div>{{ section.settings.input_richtext }}</div>
+  <div>{{ section.settings.inline }}</div>
+  <div>{{ section.settings.input_html }}</div>
+
+</div>
+<div class="page-width section-all-input-types__block">
+  
+  <div style="background-color: {{ section.settings.input-radio }};">
+  Ready Fields {% if section.settings.input_checkbox == true %} extra text
+  {% endif %}
+  </div>
+</div>
+
+<div class="page-width section-all-input__block section-all-input__block--color">
+  <h2>Design Fields</h2>
+  <div>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+  <p><span>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum</span></p>
+</div>
+<style>
+#shopify-section-{{section.id}} .section-all-input__block--color {
+  background: {{section.settings.input_bg_color}};
+  color: {{section.settings.input_color}};
+
+}
+</style>
+</div>
+
+{% schema %}
+{
+  "name": "Section all input types",
+  "tag": "section",
+  "class": "section section-all-input",
+  "settings": [
+    {
+      "type": "header",
+      "content": "All text fields"
+    },
+    {
+      "type": "paragraph",
+      "content": "In this block we will use the text fields [Learn more](https://help.shopify.com/manual/online-store/dynamic-checkout)"
+    },
+    {
+      "type": "text",
+      "id": "input_text",
+      "label": "Input text",
+      "default": "Our text default"    
+    },
+
+      {
+      "type": "textarea",
+      "id": "input_textarea",
+      "label": "Input textarea",
+      "default": "Our text area. We can use more letters and words in the default text field"    
+    },
+    {
+        "type": "richtext",
+        "id": "input_richtext",
+        "label": "Input richtext"
+    },
+    {
+        "type": "inline_richtext",
+        "id": "inline",
+        "default": "my <i>inline</i> <b>text</b>",
+        "info": "in this field we can`t use default attribute",
+        "label": "Inline rich text"
+    },
+    {
+        "type": "html",
+        "id": "input_html",
+        "label": "Input html"  
+    },
+    {
+        "type": "range",
+        "id": "input_range",
+        "min": 42,
+        "max": 420,
+        "step": 7,
+        "unit": "px",
+        "label": "Block height",
+        "default": 49
+    },
+    {
+      "type": "radio",
+      "id": "input-radio",
+      "label": "Background-color",
+      "options": [
+        {
+          "value": "#eee",
+          "label": "Gray"
+        },
+        {
+          "value": "pink",
+          "label": "pink"
+        },
+         {
+          "value": "rgba(0, 0, 0, 0.5)",
+          "label": "Half transparent"
+        }
+
+      ],
+      "default": "pink"
+  }, 
+  {
+      "type": "checkbox",
+      "id": "input_checkbox",
+      "label": "Show extra text",
+      "default": true 
+  },
+  {
+      "type": "header",
+      "content": "All text fields"
+  },
+  {
+      "type": "paragraph",
+      "content": "In this block we will use the text fields [Learn more](https://help.shopify.com/manual/online-store/dynamic-checkout)"
+  },
+  {
+      "type": "header",
+      "content": "All text fields"
+  },
+  {
+      "type": "color",
+      "id": "input_color",
+      "label": "Text color",
+      "default": "#000000"  
+  },
+  {
+      "type": "color",
+      "id": "input_bg_color",
+      "label": "Background color 1",
+      "default": "#FFC0CB"  
+  }
+
+  ],
+  "presets": [
+    {
+      "name": "Section all input types" 
+    }
+  ]
+}
+{% endschema %}

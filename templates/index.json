@@ -1,5 +1,86 @@
 {
   "sections": {
+    "02fa301d-92fe-4029-91f2-007dc7cb750b": {
+      "type": "product-benefits-metafild",
+      "settings": {
+        "paragraph": ""
+      }
+    },
+    "bd200d78-8b39-4eae-9acb-cbd01b3af39f": {
+      "type": "section-collection-tabs",
+      "blocks": {
+        "6d7dd194-61d5-4b3f-94f1-da4bb5fae0d6": {
+          "type": "Collection_tab",
+          "settings": {
+            "collection": "frontpage",
+            "alternatve_title": ""
+          }
+        },
+        "b0ddd419-98b5-43d3-81a9-7bdf308c7168": {
+          "type": "Collection_tab",
+          "settings": {
+            "collection": "summer",
+            "alternatve_title": ""
+          }
+        },
+        "ca71c547-c2f5-4343-a584-cfcbf268d7bf": {
+          "type": "Collection_tab",
+          "settings": {
+            "collection": "",
+            "alternatve_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "6d7dd194-61d5-4b3f-94f1-da4bb5fae0d6",
+        "b0ddd419-98b5-43d3-81a9-7bdf308c7168",
+        "ca71c547-c2f5-4343-a584-cfcbf268d7bf"
+      ],
+      "settings": {
+        "title": "Favorite products",
+        "description": "Choose your dream",
+        "button_text": "View all products"
+      }
+    },
+    "7c4c3907-ddb4-4c41-8aa4-e2fe1d52a12b": {
+      "type": "schema_setting_blocks",
+      "blocks": {
+        "c64e6cf7-04d9-4348-a814-6630e5a8b662": {
+          "type": "offer",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cross-fit-rope-workout.jpg"
+          }
+        },
+        "e3a609cb-aed0-4ba8-89a0-f750b09185f4": {
+          "type": "Benefit",
+          "settings": {
+            "title": "h11",
+            "Benefit_1": "benefit text 1",
+            "Benefit_2": "benefit text 2",
+            "Benefit_3": "benefit text 3",
+            "Benefit_4": "benefit text 4",
+            "Benefit_5": "benefit text 5",
+            "Benefit_6": "benefit text 6"
+          }
+        }
+      },
+      "block_order": [
+        "c64e6cf7-04d9-4348-a814-6630e5a8b662",
+        "e3a609cb-aed0-4ba8-89a0-f750b09185f4"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Benefits",
+        "description": "Benefit"
+      }
+    },
+    "3b54e1c1-ebab-4ad7-939c-86d4d355b041": {
+      "type": "image-get-links",
+      "disabled": true,
+      "settings": {
+        "get_image_v_1": "shopify:\/\/shop_images\/cross-fit-rope-workout.jpg"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -39,6 +120,37 @@
         "show_text_below": false
       }
     },
+    "bacb2e37-ecfe-4811-a8ca-94c7b34d4636": {
+      "type": "section-slider-products",
+      "blocks": {
+        "f76a7af2-bad6-429c-9fc6-f3c0173dc177": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "red-t-shirt"
+          }
+        },
+        "11d1370c-4d00-4a2c-b11d-14cf745ba84d": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "black-t-shirt"
+          }
+        },
+        "a3e5bb0c-205b-4bd9-a19a-59e73b46317a": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "blue-shirt"
+          }
+        }
+      },
+      "block_order": [
+        "f76a7af2-bad6-429c-9fc6-f3c0173dc177",
+        "11d1370c-4d00-4a2c-b11d-14cf745ba84d",
+        "a3e5bb0c-205b-4bd9-a19a-59e73b46317a"
+      ],
+      "settings": {
+        "slider-items": 2
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -66,10 +178,56 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "c55c60a1-0961-4415-a859-b7c22f8e2632": {
+      "type": "section-slider-products",
+      "blocks": {
+        "cecea3dc-789f-4bb6-a8aa-9d82f4c4909e": {
+          "type": "product",
+          "settings": {
+            "proposal_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "cecea3dc-789f-4bb6-a8aa-9d82f4c4909e"
+      ],
+      "settings": {
+        "slider-items": 2
+      }
+    },
+    "9193a47d-6827-49d3-9961-993646a1c721": {
+      "type": "image-get-links",
+      "disabled": true,
+      "settings": {}
+    },
+    "1fd00161-8bab-4f2c-8c69-32a6c7fb9d2e": {
+      "type": "section-all-input",
+      "disabled": true,
+      "settings": {
+        "input_text": "Our text default",
+        "input_textarea": "Our text area. We can use more letters and words in the default text field",
+        "input_richtext": "",
+        "inline": "my <i>inline<\/i> <b>text<\/b>",
+        "input_html": "",
+        "input_range": 49,
+        "input-radio": "pink",
+        "input_checkbox": true,
+        "input_color": "#000000",
+        "input_bg_color": "#ffc0cb"
+      }
     }
   },
   "order": [
+    "02fa301d-92fe-4029-91f2-007dc7cb750b",
+    "bd200d78-8b39-4eae-9acb-cbd01b3af39f",
+    "7c4c3907-ddb4-4c41-8aa4-e2fe1d52a12b",
+    "3b54e1c1-ebab-4ad7-939c-86d4d355b041",
     "image_banner",
-    "featured_collection"
+    "bacb2e37-ecfe-4811-a8ca-94c7b34d4636",
+    "featured_collection",
+    "c55c60a1-0961-4415-a859-b7c22f8e2632",
+    "9193a47d-6827-49d3-9961-993646a1c721",
+    "1fd00161-8bab-4f2c-8c69-32a6c7fb9d2e"
   ]
 }

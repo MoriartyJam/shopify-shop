@@ -1,0 +1,118 @@
+<div class="page-width metafields-test-section__section">
+{% if page.metafields.global.single-line_subtitle.value != blank %}
+  {{ page.metafields.global.single-line_subtitle.value }}
+{%endif%}
+
+{% if page.metafields["global"]["multi-line additional content"].value != blank  %}
+  {{ page.metafields["global"]["multi-line additional content"].value }}
+{%endif%}
+
+
+<div class="collection_recommended">
+  <div class="tab">
+    <div class="tab__headings">
+      <ul class="list">
+         {% assign first_tab = true %}
+         {% for i in (1..6) %}
+             
+            {% assign count_name = 'collection_recommended_' | append: i %}
+            {% assign collection_obj =  page.metafields.global[count_name].value %}
+                {% if collection_obj.all_products_count > 0 %} 
+                    <li class="list__item  {% if first_tab == true %} active {%endif%}">
+                      <a href="#" class="list__link">{{ collection_obj.title }} - {{ i }}</a>
+                    </li>
+                    {% if first_tab == true %}
+                        {% assign first_tab = false %}
+                    {% endif %}
+                    {% endif %}
+                  
+          {% endfor %}
+      </ul>
+    </div>
+    <div class="tab__body">
+      <ul class="list">
+        <ul class="list">
+         {% assign first_tab = true %}
+         {% for i in (1..6) %}
+             
+            {% assign count_name = 'collection_recommended_' | append: i %}
+            {% assign collection_obj =  page.metafields.global[count_name].value %}
+                {% if collection_obj.all_products_count > 0 %} 
+                    <li class="list__item  {% if first_tab == true %} active {%endif%}">
+                        <ul>
+                          {% for product in collection_obj.products limit: 5 %}
+                            <li> {{product.title}} </li>
+                          {% endfor %}
+                        </ul>
+                    </li>
+                    {% if first_tab == true %}
+                        {% assign first_tab = false %}
+                    {% endif %}
+                {% endif %}
+                  
+          {% endfor %}
+      
+       
+      </ul>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.list {
+  list-style-type: none;
+}
+.list__link {
+  text-decoration: none;
+  color: #000;
+}
+.tab {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #f1f1f1;
+}
+.tab__headings {
+  background-color: #f1f1f1;
+}
+.tab__headings .list__item {
+  display: inline-block;
+  padding: 10px 15px;
+}
+.tab__headings .list__item:not(:last-of-type) {
+  margin-right: 15px;
+}
+.tab__headings .list__item.active {
+  background-color: #616161;
+}
+.tab__headings .list__item.active .list__link {
+  color: #fff;
+}
+.tab__headings .list__link {
+  font-weight: 700;
+}
+.tab__body {
+  padding: 10px 15px;
+}
+.tab__body .list__item {
+  display: none;
+}
+.tab__body .list__item.active {
+  display: block;
+}
+
+</style>
+
+{% schema %}
+{
+  "name": "Metafields test section",
+  "tag": "section",
+  "class": "section metafields-test-section",
+  "presets": [
+    {
+      "name": "Metafields test section"
+    }
+  ]
+}
+{% endschema %}

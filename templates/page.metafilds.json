@@ -40,6 +40,7 @@
         "template--19513904267581__2190651a-4b52-4954-b918-de0cbd0b584b-text-1",
         "template--19513904267581__2190651a-4b52-4954-b918-de0cbd0b584b-button-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",

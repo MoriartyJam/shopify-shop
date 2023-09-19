@@ -40,6 +40,7 @@
         "template--19513904267581__2190651a-4b52-4954-b918-de0cbd0b584b-text-1",
         "template--19513904267581__2190651a-4b52-4954-b918-de0cbd0b584b-button-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -48,10 +49,26 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "560837a0-90dc-46c7-8c2f-5a62a4341b68": {
+      "type": "section-all-input",
+      "settings": {
+        "input_text": "Our text default",
+        "input_textarea": "Our text area. We can use more letters and words in the default text field",
+        "input_richtext": "<h3>It`s rich text<\/h3><h3><em><strong>It`s rich text<\/strong><\/em><\/h3><h3><\/h3><h3><\/h3>",
+        "inline": "my <em>inline<\/em> <strong>text yes<\/strong>",
+        "input_html": "<h1> Hello! It`s html input <\/h1>",
+        "input_range": 84,
+        "input-radio": "pink",
+        "input_checkbox": true,
+        "input_color": "#fff",
+        "input_bg_color": "#723d46"
+      }
     }
   },
   "order": [
     "main",
-    "2190651a-4b52-4954-b918-de0cbd0b584b"
+    "2190651a-4b52-4954-b918-de0cbd0b584b",
+    "560837a0-90dc-46c7-8c2f-5a62a4341b68"
   ]
 }

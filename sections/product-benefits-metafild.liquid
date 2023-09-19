@@ -1,0 +1,95 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'quick-add.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<div class="">
+  <div class="page-width product-benefits-metafild__section">
+    <div class="product-benefits-metafild__wrapper">
+        {% for i in (1..6) %}
+            {% assign count_name = 'item_' | append: i %}
+            {% assign Benefit_title = product.metafields.benefit_section[count_name].value %}
+                {% if Benefit_title != blank %} 
+                     <div class="product-benefits-metafild__block">
+                        {{ Benefit_title }} +1
+                      </div>
+                {%endif%}
+                  
+         {% endfor %}
+    </div>
+
+</div>
+
+<div class="">
+  <div class="page-width product-benefits-metafild__section">
+          <div class="grid product-grid">
+            {% for i in (1..3) %}
+              {% assign count_name = 'product_' | append: i %}
+              {% assign recomendation_product = product.metafields.recomendation[count_name].value %}
+              {% if recomendation_product != blank %} 
+                    <li
+                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {%- assign placeholder_image = 'product-apparel-' | append: forloop.rindex -%}
+                      {% render 'card-product',
+                        card_product:  product,
+                        show_vendor: section.settings.show_vendor,
+                        placeholder_image: placeholder_image
+                      %}
+                    </li>
+              {% endif %}
+
+            {% endfor %}
+          </div>
+  </div>
+</div>
+
+
+<style>
+
+.product-benefits-metafild__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 50px;  
+  padding-bottom: 50px;  
+  margin: 0 -15px;
+}
+
+.product-benefits-metafild__block {
+  margin: 15px;
+
+
+}
+
+
+</style>
+
+
+
+
+{% schema %}
+{
+  "name": "Product Benefits Metafild",
+  "tag": "section",
+  "class": "section product-benefits-metafild",
+  "settings": [
+     {
+        "type": "richtext",
+        "id": "paragraph",
+        "label": "This section use metafild"
+      }
+  ],
+  "presets": [
+    {
+      "name": "Product Benefits Metafild"
+    }
+  ]
+}
+{% endschema %}
